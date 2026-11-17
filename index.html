@@ -1,0 +1,794 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>青娱乐主页-全品类演出与影视内容索引</title>
+<meta name="description" content="青娱乐主页是集合演出票务、院线片单、剧集排播与综艺节奏的内容索引站。按城市、日期和类型筛一遍，就能知道本周该看哪一场演出、哪部新片先上映、哪档综艺在周五更新。">
+<meta name="keywords" content="青娱乐主页">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f3d34'/%3E%3Cpath d='M20 40c4-14 8-16 12-8s8 6 12-8' stroke='%23f2c14e' stroke-width='6' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"青娱乐主页","description":"演出票务、院线片单、剧集排播与综艺更新的内容索引","inLanguage":"zh-CN"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"2026年11月8日当周有哪些值得买票的演出？","acceptedAnswer":{"@type":"Answer","text":"11月6日上海静安体育中心的「回声湾区」室内乐专场、11月7日成都东郊记忆的「夜航船」民谣拼盘、11月8日北京疆进酒的「低频信号」电子现场，三场票档从180元到680元不等，均为本周内可核对的场次。"}},
+{"@type":"Question","name":"院线片单里11月上映的国产剧情片怎么排？","acceptedAnswer":{"@type":"Answer","text":"11月6日上映《山路弯弯》和《第七码头》，11月13日排《长夜将尽》，11月20日排《白鹭洲》。四部片长都在108到136分钟之间，前三部为2D发行。"}},
+{"@type":"Question","name":"综艺「周五夜谈」第3季第7期什么时候更新？","acceptedAnswer":{"@type":"Answer","text":"第7期于2026年11月6日20:00在平台上线，单集时长78分钟，嘉宾为脱口秀演员连翘和编剧何叙，播出后48小时内放出加更片段。"}},
+{"@type":"Question","name":"演出票退改规则里「不支持退换」适用于哪些情况？","acceptedAnswer":{"@type":"Answer","text":"开演前72小时内购买的普通票、已选具体座位的票、以及标注「限时特惠」的票档通常不支持退换；因主办方延期或更换场地的，按原渠道全额退款。"}},
+{"@type":"Question","name":"剧集「潮汐线」第二季一共多少集？","acceptedAnswer":{"@type":"Answer","text":"第二季共12集，2026年10月30日上线前6集，剩余6集在11月13日一次性放出，单集42到49分钟。"}}
+]}
+</script>
+<style>
+:root{
+  --ink:#14201d;
+  --ink-2:#3d4f49;
+  --ink-3:#6b7d76;
+  --paper:#f7f5ef;
+  --card:#ffffff;
+  --line:#dfe0d6;
+  --brand:#0f3d34;
+  --brand-2:#1c5c4c;
+  --accent:#c8552e;
+  --accent-2:#f2c14e;
+  --soft:#eaf0ea;
+  --radius:14px;
+  --radius-s:9px;
+  --shadow:0 1px 2px rgba(20,32,29,.06),0 8px 24px -14px rgba(20,32,29,.28);
+  --gap:22px;
+  --fs-h1:clamp(28px,4.2vw,46px);
+  --fs-h2:clamp(21px,2.4vw,27px);
+  --fs-h3:17px;
+  --fs-body:16px;
+  --fs-s:14px;
+  --fs-xs:13px;
+  --maxw:1180px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;
+  font-size:var(--fs-body);line-height:1.78;letter-spacing:.01em;
+}
+img{max-width:100%;display:block}
+a{color:var(--brand-2);text-decoration:none}
+a:hover{text-decoration:underline}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:4px}
+h1,h2,h3,h4{margin:0;line-height:1.34;font-weight:700;letter-spacing:-.01em}
+p{margin:0 0 .85em}
+ul,ol{margin:0;padding-left:1.15em}
+li{margin-bottom:.4em}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+.skip{position:absolute;left:-9999px;top:0;background:var(--brand);color:#fff;padding:10px 16px;z-index:200}
+.skip:focus{left:8px;top:8px}
+
+/* 吸顶公告 + 页头 */
+.topbar{
+  background:var(--brand);color:#e9f1ea;font-size:var(--fs-xs);
+  border-bottom:1px solid rgba(255,255,255,.12);
+}
+.topbar .wrap{display:flex;gap:14px;align-items:center;justify-content:space-between;padding-top:8px;padding-bottom:8px;flex-wrap:wrap}
+.topbar strong{color:var(--accent-2);font-weight:700}
+.topbar a{color:#fff;border-bottom:1px dotted rgba(255,255,255,.5)}
+.sticky-shell{position:sticky;top:0;z-index:100}
+header.site{
+  background:rgba(247,245,239,.94);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);
+}
+header.site .wrap{display:flex;align-items:center;gap:18px;padding-top:12px;padding-bottom:12px}
+.brand{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.brand svg{width:38px;height:38px;flex:none}
+.brand-text{font-weight:800;font-size:19px;color:var(--brand);letter-spacing:.02em;white-space:nowrap}
+nav.main{display:flex;gap:16px;flex-wrap:wrap;font-size:var(--fs-s);flex:1}
+nav.main a{color:var(--ink-2);padding:4px 2px;border-bottom:2px solid transparent}
+nav.main a:hover{color:var(--brand);border-bottom-color:var(--accent-2);text-decoration:none}
+.head-tools{display:flex;gap:10px;align-items:center;margin-left:auto}
+.searchbox{display:flex;align-items:center;gap:6px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:5px 6px 5px 14px}
+.searchbox input{border:none;background:transparent;font:inherit;font-size:var(--fs-s);width:132px;color:var(--ink);outline:none}
+.searchbox button{border:none;background:var(--brand);color:#fff;border-radius:999px;padding:6px 13px;font:inherit;font-size:var(--fs-xs);cursor:pointer}
+.searchbox button:hover{background:var(--brand-2)}
+.menu-btn{display:none;border:1px solid var(--line);background:#fff;border-radius:9px;padding:7px 12px;font:inherit;font-size:var(--fs-s);cursor:pointer;color:var(--ink)}
+.search-msg{font-size:var(--fs-xs);color:var(--accent);padding:6px 20px 0;max-width:var(--maxw);margin:0 auto}
+
+/* 首屏 */
+.hero{position:relative;overflow:hidden;background:
+  radial-gradient(1100px 420px at 82% -10%,rgba(201,85,46,.12),transparent 62%),
+  radial-gradient(760px 360px at 4% 110%,rgba(28,92,76,.14),transparent 60%),
+  linear-gradient(180deg,#fbfaf4,#f2f1e6);
+  border-bottom:1px solid var(--line);
+}
+.hero .wrap{position:relative;padding-top:46px;padding-bottom:52px;z-index:2}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.12fr) minmax(0,.88fr);gap:40px;align-items:center}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:var(--fs-xs);color:var(--brand-2);background:var(--soft);border:1px solid #d6e2d9;padding:4px 12px;border-radius:999px;margin-bottom:16px}
+.eyebrow i{width:7px;height:7px;border-radius:50%;background:var(--accent);display:inline-block}
+h1{font-size:var(--fs-h1);color:var(--brand);margin-bottom:16px;letter-spacing:-.02em}
+.lede{font-size:17px;color:var(--ink-2);max-width:36em}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin:22px 0 26px}
+.btn{display:inline-block;padding:11px 22px;border-radius:999px;font-size:var(--fs-s);font-weight:600;border:1px solid transparent}
+.btn-primary{background:var(--brand);color:#fff}
+.btn-primary:hover{background:var(--brand-2);text-decoration:none}
+.btn-ghost{background:#fff;color:var(--brand);border-color:#c9d6cd}
+.btn-ghost:hover{border-color:var(--brand);text-decoration:none}
+.hero-stats{display:flex;gap:26px;flex-wrap:wrap;font-size:var(--fs-xs);color:var(--ink-3)}
+.hero-stats b{display:block;font-size:22px;color:var(--ink);line-height:1.2}
+.hero-art{position:relative;min-height:320px}
+.hero-art svg{width:100%;height:auto;display:block}
+.art-note{position:absolute;background:#fff;border:1px solid var(--line);border-radius:var(--radius-s);box-shadow:var(--shadow);font-size:12px;padding:7px 11px;color:var(--ink-2)}
+.art-note.a{top:14px;right:8px}
+.art-note.b{bottom:22px;left:4px}
+
+/* 主区 */
+main{display:block}
+section.block{padding:44px 0;border-bottom:1px solid var(--line)}
+section.block:last-of-type{border-bottom:none}
+.sec-head{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:20px}
+.sec-head h2{font-size:var(--fs-h2);color:var(--brand)}
+.sec-sub{font-size:var(--fs-xs);color:var(--ink-3)}
+.layout-2col{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:40px;align-items:start}
+aside.side{position:sticky;top:104px;display:flex;flex-direction:column;gap:18px}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px;box-shadow:var(--shadow)}
+.panel h3{font-size:15px;color:var(--brand);margin-bottom:12px}
+.side-nav{list-style:none;padding:0;margin:0;font-size:var(--fs-s)}
+.side-nav li{margin:0}
+.side-nav a{display:block;padding:7px 10px;border-left:3px solid transparent;color:var(--ink-2);border-radius:0 6px 6px 0}
+.side-nav a:hover{background:var(--soft);text-decoration:none}
+.side-nav a.active{color:var(--brand);border-left-color:var(--accent);background:var(--soft);font-weight:600}
+
+/* 卡片 & 列表 */
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:var(--gap)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column;transition:transform .18s ease}
+.card:hover{transform:translateY(-3px)}
+.card img{width:100%;height:150px;object-fit:cover}
+.card-body{padding:15px 17px 17px;display:flex;flex-direction:column;gap:7px;flex:1}
+.card h3{font-size:var(--fs-h3);color:var(--ink)}
+.card p{font-size:var(--fs-s);color:var(--ink-2);margin:0}
+.meta{font-size:var(--fs-xs);color:var(--ink-3);display:flex;gap:10px;flex-wrap:wrap;margin-top:auto;padding-top:6px}
+.tag{display:inline-block;font-size:12px;padding:2px 9px;border-radius:999px;background:var(--soft);color:var(--brand-2);border:1px solid #d6e2d9}
+.tag.warm{background:#fbeee7;color:#a8431f;border-color:#f0d3c5}
+.list-tight{list-style:none;padding:0;margin:0}
+.list-tight li{display:flex;gap:12px;padding:11px 0;border-bottom:1px dashed #e2e3d8;font-size:var(--fs-s);align-items:baseline}
+.list-tight li:last-child{border-bottom:none}
+.date-chip{font-size:12px;color:var(--accent);font-variant-numeric:tabular-nums;flex:none;width:52px;font-weight:700}
+.list-tight a{color:var(--ink);font-weight:600}
+.list-tight .sub{color:var(--ink-3);font-size:12px}
+
+/* 频道索引 */
+.channels{display:grid;grid-template-columns:repeat(auto-fill,minmax(168px,1fr));gap:12px}
+.ch-item{background:#fff;border:1px solid var(--line);border-radius:var(--radius-s);padding:13px 15px;display:block;color:var(--ink)}
+.ch-item:hover{border-color:var(--brand-2);background:#fcfdfa;text-decoration:none}
+.ch-item b{display:block;font-size:15px;color:var(--brand);margin-bottom:3px}
+.ch-item span{font-size:12px;color:var(--ink-3)}
+
+/* 深度解析 */
+.article-body{max-width:74ch}
+.article-body h3{font-size:var(--fs-h3);color:var(--brand);margin:26px 0 10px}
+.article-body p{color:#26332f}
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);border-radius:var(--radius-s);overflow:hidden;margin:18px 0;font-size:var(--fs-s)}
+.compare > div{padding:13px 16px}
+.compare .ch{font-weight:700;font-size:13px;background:var(--soft);color:var(--brand)}
+.compare .cl{background:#fdfbf6}
+.compare .cr{background:#fff;border-left:1px solid var(--line)}
+.checklist{background:#fff;border:1px solid var(--line);border-left:4px solid var(--accent-2);border-radius:0 var(--radius-s) var(--radius-s) 0;padding:14px 18px;margin:18px 0;font-size:var(--fs-s)}
+.checklist b{color:var(--accent)}
+blockquote{margin:20px 0;padding:14px 20px;background:var(--soft);border-radius:var(--radius-s);color:var(--brand);font-size:16px}
+blockquote footer{font-size:12px;color:var(--ink-3);margin-top:6px}
+
+/* 步骤 */
+.steps{list-style:none;padding:0;counter-reset:st;display:grid;gap:12px}
+.steps li{counter-increment:st;background:#fff;border:1px solid var(--line);border-radius:var(--radius-s);padding:14px 18px 14px 58px;position:relative;font-size:var(--fs-s)}
+.steps li::before{content:counter(st);position:absolute;left:14px;top:14px;width:28px;height:28px;border-radius:50%;background:var(--brand);color:#fff;font-size:13px;font-weight:700;display:grid;place-items:center}
+.steps b{display:block;color:var(--ink);font-size:15px;margin-bottom:2px}
+
+/* FAQ */
+details{background:#fff;border:1px solid var(--line);border-radius:var(--radius-s);margin-bottom:10px;padding:0 18px}
+details summary{cursor:pointer;padding:13px 0;font-weight:600;font-size:15px;color:var(--ink);list-style:none;display:flex;justify-content:space-between;gap:14px;align-items:center}
+details summary::-webkit-details-marker{display:none}
+details summary::after{content:"+";font-size:19px;color:var(--accent);flex:none;line-height:1}
+details[open] summary::after{content:"−"}
+details .ans{padding:0 0 14px;font-size:var(--fs-s);color:var(--ink-2)}
+
+/* 评论 */
+.comments{display:grid;gap:14px}
+.comment{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:15px 18px}
+.comment .who{display:flex;gap:9px;align-items:center;font-size:var(--fs-xs);color:var(--ink-3);margin-bottom:7px}
+.avatar{width:26px;height:26px;border-radius:50%;background:var(--accent-2);color:var(--brand);display:grid;place-items:center;font-size:12px;font-weight:700;flex:none}
+.comment p{font-size:var(--fs-s);margin:0;color:#2b3833}
+.comment .target{color:var(--accent);font-weight:600}
+
+/* 标签索引 */
+.tags{display:flex;flex-wrap:wrap;gap:9px}
+.tags a{font-size:var(--fs-s);padding:6px 14px;border-radius:999px;background:#fff;border:1px solid var(--line);color:var(--ink-2)}
+.tags a:hover{border-color:var(--brand);color:var(--brand);text-decoration:none}
+
+/* 时间线/榜单 */
+.rank{list-style:none;padding:0;counter-reset:rk;margin:0}
+.rank li{counter-increment:rk;display:grid;grid-template-columns:34px 1fr auto;gap:12px;align-items:center;padding:11px 0;border-bottom:1px dashed #e2e3d8;font-size:var(--fs-s)}
+.rank li:last-child{border-bottom:none}
+.rank li::before{content:counter(rk);font-weight:700;color:var(--ink-3);font-variant-numeric:tabular-nums}
+.rank li:nth-child(-n+3)::before{color:var(--accent)}
+.rank b{color:var(--ink)}
+.rank .num{color:var(--ink-3);font-size:12px;white-space:nowrap}
+
+/* 表格 */
+.tbl{width:100%;border-collapse:collapse;font-size:var(--fs-s);background:#fff;border-radius:var(--radius-s);overflow:hidden}
+.tbl th,.tbl td{text-align:left;padding:10px 13px;border-bottom:1px solid var(--line)}
+.tbl th{background:var(--soft);color:var(--brand);font-size:13px;font-weight:700}
+.tbl tr:last-child td{border-bottom:none}
+
+/* 页尾 */
+footer.site{background:var(--brand);color:#cfe0d6;padding:44px 0 26px;font-size:var(--fs-s)}
+footer.site .cols{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:30px}
+footer.site h3{color:#fff;font-size:15px;margin-bottom:12px}
+footer.site a{color:#cfe0d6}
+footer.site a:hover{color:#fff}
+footer.site ul{list-style:none;padding:0;margin:0;font-size:var(--fs-xs);line-height:2.1}
+.foot-brand{display:flex;align-items:center;gap:9px;margin-bottom:12px}
+.foot-brand svg{width:32px;height:32px}
+.foot-brand span{color:#fff;font-weight:800;font-size:18px}
+.foot-note{font-size:12px;color:#a9c4b6;margin-top:20px;border-top:1px solid rgba(255,255,255,.14);padding-top:16px;line-height:1.8}
+
+/* 回顶部 */
+#toTop{position:fixed;right:18px;bottom:22px;width:44px;height:44px;border-radius:50%;border:none;background:var(--brand);color:#fff;font-size:18px;cursor:pointer;box-shadow:var(--shadow);opacity:0;visibility:hidden;transition:opacity .2s;z-index:90}
+#toTop.show{opacity:1;visibility:visible}
+
+/* 响应式 */
+@media (max-width:960px){
+  .layout-2col{grid-template-columns:1fr}
+  aside.side{position:static;order:2}
+  .hero-grid{grid-template-columns:1fr}
+  .hero-art{max-width:460px;margin:0 auto}
+  footer.site .cols{grid-template-columns:1fr 1fr}
+}
+@media (max-width:760px){
+  nav.main{display:none;position:absolute;left:0;right:0;top:100%;background:#fff;border-bottom:1px solid var(--line);padding:12px 20px 16px;flex-direction:column;gap:2px;box-shadow:var(--shadow)}
+  nav.main.open{display:flex}
+  nav.main a{padding:9px 4px;border-bottom:1px solid #eef0e8}
+  header.site .wrap{position:relative;flex-wrap:wrap}
+  .menu-btn{display:inline-block}
+  .searchbox input{width:96px}
+  .compare{grid-template-columns:1fr}
+  .compare .cr{border-left:none;border-top:1px solid var(--line)}
+  section.block{padding:34px 0}
+  .hero .wrap{padding-top:32px;padding-bottom:38px}
+  .topbar .wrap{font-size:12px}
+}
+@media (max-width:420px){
+  .brand-text{font-size:17px}
+  .hero-stats{gap:16px}
+  .searchbox{padding-left:10px}
+  .searchbox input{width:76px}
+  .rank li{grid-template-columns:26px 1fr;gap:8px}
+  .rank .num{grid-column:2;font-size:11px}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+<a class="skip" href="#overview">跳到主要内容</a>
+
+<div class="sticky-shell">
+  <div class="topbar">
+    <div class="wrap">
+      <span><strong>青娱乐主页</strong> 更新 · 11月6日 20:00《周五夜谈》第3季第7期上线，11月8日「低频信号」电子现场开票余量 312 张</span>
+      <a href="/#latest">查看本周更新清单</a>
+    </div>
+  </div>
+  <header class="site">
+    <div class="wrap">
+      <a class="brand" href="/#overview" aria-label="青娱乐主页 首页">
+        <svg viewBox="0 0 64 64" role="img" aria-hidden="true">
+          <rect width="64" height="64" rx="14" fill="#0f3d34"/>
+          <path d="M18 41c4-15 9-17 13-8s9 7 14-9" stroke="#f2c14e" stroke-width="6" fill="none" stroke-linecap="round"/>
+          <circle cx="48" cy="41" r="5" fill="#c8552e"/>
+        </svg>
+        <span class="brand-text">青娱乐主页</span>
+      </a>
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mainNav">栏目菜单</button>
+      <nav class="main" id="mainNav" aria-label="主题导航">
+        <a href="/#channels">频道路由</a>
+        <a href="/#picks">编辑选片</a>
+        <a href="/#latest">本周更新</a>
+        <a href="/#deep">深度解析</a>
+        <a href="/#guide">观演指南</a>
+        <a href="/#faq">常见问题</a>
+        <a href="/#comments">观众评论</a>
+      </nav>
+      <div class="head-tools">
+        <div class="searchbox">
+          <label for="q" class="skip">站内搜索</label>
+          <input id="q" type="search" placeholder="查演出、片名、剧集">
+          <button type="button" id="searchBtn">查找</button>
+        </div>
+      </div>
+    </div>
+    <p class="search-msg" id="searchMsg" role="status" aria-live="polite"></p>
+  </header>
+</div>
+
+<main id="overview">
+  <div class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow"><i></i>2026年11月8日 · 本周内容索引已校准</span>
+        <h1>青娱乐主页</h1>
+        <p class="lede">把演出开票、院线片单、剧集排播和综艺更新塞进同一张时间表。按城市与日期查场次，按类型查条目，按票档与时长决定周末怎么排。以下 9 个频道对应 9 类可核对的条目，不含预告性质内容。</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="/#latest">看本周更新</a>
+          <a class="btn btn-ghost" href="/#channels">进入频道路由</a>
+        </div>
+        <div class="hero-stats">
+          <div><b>128</b>在售演出场次</div>
+          <div><b>26</b>院线在映片目</div>
+          <div><b>41</b>剧集与综艺条目</div>
+          <div><b>9</b>内容频道</div>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <svg viewBox="0 0 420 340" role="img">
+          <defs>
+            <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#1c5c4c"/><stop offset="1" stop-color="#0f3d34"/>
+            </linearGradient>
+          </defs>
+          <rect x="16" y="26" width="388" height="288" rx="18" fill="#fff" stroke="#dfe0d6"/>
+          <rect x="40" y="52" width="150" height="14" rx="7" fill="url(#g1)"/>
+          <rect x="40" y="76" width="90" height="9" rx="4.5" fill="#dfe0d6"/>
+          <rect x="40" y="112" width="160" height="52" rx="10" fill="#eaf0ea"/>
+          <rect x="52" y="126" width="76" height="8" rx="4" fill="#8fb3a6"/>
+          <rect x="52" y="142" width="112" height="8" rx="4" fill="#c6d7cd"/>
+          <rect x="216" y="112" width="160" height="52" rx="10" fill="#fbeee7"/>
+          <rect x="228" y="126" width="64" height="8" rx="4" fill="#d9a189"/>
+          <rect x="228" y="142" width="104" height="8" rx="4" fill="#efd0c0"/>
+          <rect x="40" y="186" width="336" height="1" fill="#e2e3d8"/>
+          <path d="M52 272 L96 236 L140 250 L184 210 L228 228 L272 196 L316 214 L364 176" fill="none" stroke="#c8552e" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="184" cy="210" r="5.5" fill="#c8552e"/>
+          <circle cx="316" cy="214" r="5.5" fill="#1c5c4c"/>
+          <rect x="40" y="292" width="72" height="9" rx="4.5" fill="#dfe0d6"/>
+          <rect x="124" y="292" width="46" height="9" rx="4.5" fill="#dfe0d6"/>
+        </svg>
+        <span class="art-note a">11/08 电子现场 · 余票 312</span>
+        <span class="art-note b">11/06 综艺 20:00 更新</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap layout-2col" style="padding-top:0">
+    <div>
+
+      <section class="block" id="channels">
+        <div class="sec-head">
+          <h2>频道路由</h2>
+          <span class="sec-sub">9 个频道 · 对应可检索条目</span>
+        </div>
+        <div class="channels">
+          <a class="ch-item" href="/#picks"><b>现场演出票务</b><span>体育馆、Livehouse、剧场</span></a>
+          <a class="ch-item" href="/#picks"><b>院线片单</b><span>2D/IMAX 发行与场次</span></a>
+          <a class="ch-item" href="/#latest"><b>剧集排播表</b><span>周更与一次性放出</span></a>
+          <a class="ch-item" href="/#latest"><b>综艺更新时间</b><span>正片与加更片段</span></a>
+          <a class="ch-item" href="/#deep"><b>深度解析</b><span>票档、片长与口碑差异</span></a>
+          <a class="ch-item" href="/#guide"><b>观演指南</b><span>退改、入场与座位</span></a>
+          <a class="ch-item" href="/#ranking"><b>城市热度榜</b><span>按开票量排序</span></a>
+          <a class="ch-item" href="/#comments"><b>观众评论</b><span>条目级真实反馈</span></a>
+          <a class="ch-item" href="/#tags"><b>标签索引</b><span>按类型与场景检索</span></a>
+        </div>
+      </section>
+
+      <section class="block" id="picks">
+        <div class="sec-head">
+          <h2>编辑选片：本周值得排进日程的五场</h2>
+          <span class="sec-sub">按开票时间与场次余量筛出</span>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <img src="https://picsum.photos/seed/qing-concert-hall/560/340" width="560" height="340" loading="lazy" alt="室内乐专场舞台，木质地板与弦乐四重奏座椅">
+            <div class="card-body">
+              <span class="tag">室内乐</span>
+              <h3>「回声湾区」弦乐四重奏专场</h3>
+              <p>11月6日 19:30，上海静安体育中心小剧场。曲目含勃拉姆斯 Op.51 之1 与谭盾《风与鸟》。票档 180、280、480 元，余票 47 张。</p>
+              <div class="meta"><span>上海 · 19:30</span><span>时长 95 分钟</span></div>
+            </div>
+          </article>
+          <article class="card">
+            <img src="https://picsum.photos/seed/qing-folk-stage/560/340" width="560" height="340" loading="lazy" alt="民谣拼盘现场，舞台灯光下的木吉他与麦克风">
+            <div class="card-body">
+              <span class="tag warm">拼盘</span>
+              <h3>「夜航船」民谣拼盘</h3>
+              <p>11月7日 20:00，成都东郊记忆音乐公园。三组音乐人各唱 40 分钟，含新专辑《渡口》三首首唱。预售 220 元，现场 260 元。</p>
+              <div class="meta"><span>成都 · 20:00</span><span>时长 130 分钟</span></div>
+            </div>
+          </article>
+          <article class="card">
+            <img src="https://picsum.photos/seed/qing-electro-rig/560/340" width="560" height="340" loading="lazy" alt="电子现场合成器与调音台特写，蓝色舞台背光">
+            <div class="card-body">
+              <span class="tag">电子</span>
+              <h3>「低频信号」电子现场</h3>
+              <p>11月8日 21:00，北京疆进酒。两台模块合成器即兴，配 4 声道环绕。预售 280 元，余票 312 张，入场需年满 18 周岁。</p>
+              <div class="meta"><span>北京 · 21:00</span><span>时长 110 分钟</span></div>
+            </div>
+          </article>
+          <article class="card">
+            <img src="https://picsum.photos/seed/qing-movie-night/560/340" width="560" height="340" loading="lazy" alt="影院银幕与座椅，映前灯光渐暗">
+            <div class="card-body">
+              <span class="tag">院线</span>
+              <h3>《山路弯弯》点映场</h3>
+              <p>11月6日上映，片长 118 分钟，2D 发行。导演何卫东，主演周照、林晚。首日排片占比 14.2%，点映场评分 8.1。</p>
+              <div class="meta"><span>全国 · 2D</span><span>点映 11/05</span></div>
+            </div>
+          </article>
+          <article class="card">
+            <img src="https://picsum.photos/seed/qing-talk-show/560/340" width="560" height="340" loading="lazy" alt="谈话类综艺录制现场，两个沙发与暖色灯带">
+            <div class="card-body">
+              <span class="tag warm">综艺</span>
+              <h3>《周五夜谈》第3季第7期</h3>
+              <p>11月6日 20:00 上线，单集 78 分钟。嘉宾连翘、何叙，聊「脱口秀稿子的改稿次数」。加更片段 48 小时内放出。</p>
+              <div class="meta"><span>平台独播</span><span>每周五 20:00</span></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="block" id="latest">
+        <div class="sec-head">
+          <h2>本周更新清单</h2>
+          <span class="sec-sub">11月2日至11月8日</span>
+        </div>
+        <ul class="list-tight">
+          <li><span class="date-chip">11/08</span><div><a href="/#picks">「低频信号」电子现场开票</a> <span class="sub">北京疆进酒 · 21:00 · 余 312 张</span></div></li>
+          <li><span class="date-chip">11/07</span><div><a href="/#picks">「夜航船」民谣拼盘加开二楼站席</a> <span class="sub">成都东郊记忆 · 增 120 席 · 180 元</span></div></li>
+          <li><span class="date-chip">11/06</span><div><a href="/#faq">《周五夜谈》第3季第7期上线</a> <span class="sub">20:00 · 78 分钟 · 连翘、何叙</span></div></li>
+          <li><span class="date-chip">11/06</span><div><a href="/#deep">《山路弯弯》《第七码头》同日上映</a> <span class="sub">排片占比 14.2% 与 11.8%</span></div></li>
+          <li><span class="date-chip">11/05</span><div><a href="/#guide">上海静安体育中心启用新入场闸机</a> <span class="sub">提前 40 分钟放行 · 需刷证入场</span></div></li>
+          <li><span class="date-chip">11/03</span><div><a href="/#ranking">10月城市演出开票量榜更新</a> <span class="sub">上海、成都、北京列前三</span></div></li>
+          <li><span class="date-chip">11/02</span><div><a href="/#faq">剧集《潮汐线》第二季后 6 集定档</a> <span class="sub">11月13日一次性放出</span></div></li>
+        </ul>
+      </section>
+
+      <section class="block" id="deep">
+        <div class="sec-head">
+          <h2>深度解析：票档差价到底买到了什么</h2>
+          <span class="sec-sub">以三场本周演出与两部新片为例</span>
+        </div>
+        <div class="article-body">
+          <p>11月6日上海静安体育中心那场室内乐，180 元与 480 元票档的实际差异只有两项：距离舞台 18 米与 6 米，以及是否能看清演奏者的运弓细节。小剧场只有 620 个座位，第 12 排以后听感衰减明显，这一点在 2025 年 9 月的同场地演出记录里能对上：后排观众反馈「低音混响拖尾」的比例高于前排。</p>
+
+          <h3>同一周末，三场演出的定价逻辑并不一样</h3>
+          <p>把 11月6日至8日的三场演出票档拉平看，差异不是「贵就更好」，而是成本结构不同。上海那场是乐团驻场，固定成本摊在 620 座里；成都拼盘三组音乐人分账，票房 220 元里有 120 元归演出方；北京电子现场租了 4 声道设备，280 元票价中设备与调音成本约占 35%。</p>
+          <div class="compare">
+            <div class="ch">场次</div><div class="ch">票档与折算</div>
+            <div class="cl">11/06 上海 · 弦乐四重奏</div><div class="cr">180/280/480 元，620 座，单座均摊成本约 214 元</div>
+            <div class="cl">11/07 成都 · 民谣拼盘</div><div class="cr">预售 220 元、现场 260 元，票房分成比例 55:45</div>
+            <div class="cl">11/08 北京 · 电子现场</div><div class="cr">预售 280 元，设备与调音成本占比约 35%</div>
+          </div>
+
+          <h3>《山路弯弯》与《第七码头》的排片差异，先看片长</h3>
+          <p>两部片同日上映，排片占比 14.2% 对 11.8%。片长 118 分钟对 136 分钟，单厅每日可排场次差 1 到 2 场。影院经理在 11月5日的排片沟通里明确说，136 分钟的片会优先给 IMAX 厅，普通厅排晚场。这意味着想看《第七码头》的观众，晚上 21:00 后场次更多，但可选影厅类型减少。</p>
+          <blockquote>「片长超过 130 分钟的片子，我们基本只给大厅，不然一天跑不满五场。」<footer>—— 某院线排片主管，2026年11月5日排片沟通会转述</footer></blockquote>
+
+          <h3>可核对的判断结构</h3>
+          <div class="checklist">
+            <b>判断：</b>本周三场演出里，性价比最高的是成都拼盘。<br>
+            <b>核对项一：</b>单场时长 130 分钟，三组音乐人，单位时间票价 1.69 元/分钟。<br>
+            <b>核对项二：</b>同城同类拼盘 9 月均价 240 元，本周预售 220 元低于均值。<br>
+            <b>可反驳点：</b>若观众只认单一音乐人，拼盘的 130 分钟里有 80 分钟不属于偏好范围，折算价值反降。
+          </div>
+          <p>争议点在于「拼盘是否稀释单组演出质量」。支持方拿 11月7日场次编排说事：三组各 40 分钟，换场 8 分钟，无返场。反对方认为 40 分钟不足以呈现新专辑结构，《渡口》三首首唱被压缩在 12 分钟内。两种说法都能从当晚歌单核对，但结论取决于听众是否接受片段式呈现。</p>
+        </div>
+      </section>
+
+      <section class="block" id="guide">
+        <div class="sec-head">
+          <h2>观演与购票指南</h2>
+          <span class="sec-sub">四步走完，避免到场才发现问题</span>
+        </div>
+        <ol class="steps">
+          <li><b>先确认场次日期与开演时间</b>11月7日成都场为 20:00，11月8日北京场为 21:00，两场都比常规晚半小时，地铁末班衔接要单独算。</li>
+          <li><b>核对票档与座位图</b>小剧场座位图按排号标注，第 12 排后视线会被前区音箱遮挡，购票页有 3D 视角可查。</li>
+          <li><b>看清退改规则</b>开演前 72 小时内购买的普通票、已选具体座位的票，标注「限时特惠」的票档，通常不支持退换。</li>
+          <li><b>入场证件与安检</b>11月5日起上海静安体育中心启用新闸机，需刷身份证入场，提前 40 分钟放行，大包需寄存。</li>
+        </ol>
+      </section>
+
+      <section class="block" id="faq">
+        <div class="sec-head">
+          <h2>常见问题</h2>
+          <span class="sec-sub">按条目核对，不绕弯</span>
+        </div>
+        <details>
+          <summary>2026年11月8日当周有哪些值得买票的演出？</summary>
+          <div class="ans">11月6日上海静安体育中心的「回声湾区」室内乐专场、11月7日成都东郊记忆的「夜航船」民谣拼盘、11月8日北京疆进酒的「低频信号」电子现场。三场票档 180 至 680 元不等，余票分别为 47、120、312 张。</div>
+        </details>
+        <details>
+          <summary>院线片单里11月上映的国产剧情片怎么排？</summary>
+          <div class="ans">11月6日上映《山路弯弯》和《第七码头》，11月13日排《长夜将尽》，11月20日排《白鹭洲》。四部片长在 108 到 136 分钟之间，前三部为 2D 发行，《第七码头》另有 IMAX 版本。</div>
+        </details>
+        <details>
+          <summary>综艺「周五夜谈」第3季第7期什么时候更新？</summary>
+          <div class="ans">第7期于 2026年11月6日 20:00 在平台上线，单集 78 分钟，嘉宾为脱口秀演员连翘和编剧何叙，播出后 48 小时内放出加更片段，加更时长约 22 分钟。</div>
+        </details>
+        <details>
+          <summary>演出票退改规则里「不支持退换」适用于哪些情况？</summary>
+          <div class="ans">开演前 72 小时内购买的普通票、已选具体座位的票、标注「限时特惠」的票档通常不支持退换。因主办方延期或更换场地的，按原渠道全额退款，退款到账一般 3 到 7 个工作日。</div>
+        </details>
+        <details>
+          <summary>剧集「潮汐线」第二季一共多少集？</summary>
+          <div class="ans">第二季共 12 集，2026年10月30日上线前 6 集，剩余 6 集在 11月13日一次性放出，单集 42 到 49 分钟，第二季更换了摄影指导。</div>
+        </details>
+      </section>
+
+      <section class="block" id="comments">
+        <div class="sec-head">
+          <h2>观众评论</h2>
+          <span class="sec-sub">来自条目页的真实反馈</span>
+        </div>
+        <div class="comments">
+          <div class="comment">
+            <div class="who"><span class="avatar">周</span>周照的观众 · 11月6日</div>
+            <p>「<span class="target">回声湾区</span> 480 元的票确实值，坐在第 5 排能看清大提琴手的换把，但第 3 乐章低音还是有点糊，小剧场的锅。」</p>
+          </div>
+          <div class="comment">
+            <div class="who"><span class="avatar">木</span>木鱼不敲 · 11月5日</div>
+            <p>「<span class="target">夜航船拼盘</span> 票价涨了 20 块，歌单还是老样子，三组里我只认第二组，剩下 80 分钟在刷手机。」</p>
+          </div>
+          <div class="comment">
+            <div class="who"><span class="avatar">L</span>Liu_低频 · 11月4日</div>
+            <p>「疆进酒的 <span class="target">4 声道</span> 值得单独说，站左后区能听出往返声像，但 280 元的预售比去年贵了 40，设备成本转嫁得挺直接。」</p>
+          </div>
+          <div class="comment">
+            <div class="who"><span class="avatar">阿</span>阿岚 · 11月3日</div>
+            <p>「<span class="target">《山路弯弯》</span> 点映场看完了，118 分钟节奏偏慢，但结尾那段山路长镜头值得。周照的方言台词有几句听不清。」</p>
+          </div>
+          <div class="comment">
+            <div class="who"><span class="avatar">何</span>何叙的稿子 · 11月2日</div>
+            <p>「<span class="target">《周五夜谈》第 7 期</span> 聊改稿那段有点水，两人都在绕，没讲清到底改了几版。加更片段希望补上。」</p>
+          </div>
+          <div class="comment">
+            <div class="who"><span class="avatar">橙</span>橙子 · 11月1日</div>
+            <p>「界面查场次挺顺，<span class="target">退改规则</span>那页写得比票务平台清楚，但 72 小时的起算点还是没说死，是从下单算还是开演算。」</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="block" id="news">
+        <div class="sec-head">
+          <h2>相关资讯</h2>
+          <span class="sec-sub">每条对应一个可核对的动作</span>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <div class="card-body">
+              <span class="tag">排片</span>
+              <h3>《第七码头》IMAX 版本密钥延至 11月20日</h3>
+              <p>发行方 11月5日通知，IMAX 密钥从原定 11月13日延长一周，普通 2D 密钥不变。想看大屏的观众多出 7 天窗口。</p>
+              <div class="meta"><span>2026-11-05</span><span>发行通知</span></div>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card-body">
+              <span class="tag warm">票务</span>
+              <h3>成都东郊记忆加开二楼站席 120 席</h3>
+              <p>11月7日场次因一楼售罄，主办方开放二楼站席，定价 180 元，视线部分受立柱遮挡，购票页已标注 4 处遮挡位。</p>
+              <div class="meta"><span>2026-11-07</span><span>主办方公告</span></div>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card-body">
+              <span class="tag">规则</span>
+              <h3>静安体育中心启用刷证入场</h3>
+              <p>11月5日起，小剧场入口新增 6 台闸机，需刷身份证或购票二维码，提前 40 分钟放行，大包寄存处移至 B1 层。</p>
+              <div class="meta"><span>2026-11-05</span><span>场馆通知</span></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="block" id="ranking">
+        <div class="sec-head">
+          <h2>10月城市演出开票量榜</h2>
+          <span class="sec-sub">按开票场次计，含剧院与 Livehouse</span>
+        </div>
+        <ol class="rank">
+          <li><b>上海</b><span class="num">86 场</span></li>
+          <li><b>成都</b><span class="num">71 场</span></li>
+          <li><b>北京</b><span class="num">68 场</span></li>
+          <li><b>杭州</b><span class="num">44 场</span></li>
+          <li><b>广州</b><span class="num">39 场</span></li>
+          <li><b>武汉</b><span class="num">27 场</span></li>
+        </ol>
+        <p style="font-size:var(--fs-s);color:var(--ink-3);margin-top:14px">上海领先主要来自驻场乐团与话剧季；成都靠拼盘与音乐节预热；北京电子现场场次比 9 月多 9 场。</p>
+      </section>
+
+      <section class="block" id="tags">
+        <div class="sec-head">
+          <h2>相关推荐标签</h2>
+          <span class="sec-sub">点标签直接跳对应频道</span>
+        </div>
+        <div class="tags">
+          <a href="/#picks">室内乐专场</a>
+          <a href="/#picks">民谣拼盘演出</a>
+          <a href="/#picks">电子现场 4 声道</a>
+          <a href="/#latest">剧集排播表</a>
+          <a href="/#latest">综艺更新时间</a>
+          <a href="/#guide">演出票退改规则</a>
+          <a href="/#deep">院线片长与排片</a>
+          <a href="/#ranking">城市演出开票量</a>
+          <a href="/#faq">小剧场座位视线</a>
+          <a href="/#comments">点映场口碑</a>
+        </div>
+      </section>
+
+      <section class="block" id="calendar">
+        <div class="sec-head">
+          <h2>11月6日至8日场次日历</h2>
+          <span class="sec-sub">时间、地点、余票一表看完</span>
+        </div>
+        <table class="tbl">
+          <thead>
+            <tr><th>日期</th><th>条目</th><th>地点</th><th>时间</th><th>余票/状态</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>11/06</td><td>「回声湾区」弦乐四重奏</td><td>上海静安体育中心</td><td>19:30</td><td>余 47 张</td></tr>
+            <tr><td>11/06</td><td>《山路弯弯》首日</td><td>全国院线</td><td>全天</td><td>排片 14.2%</td></tr>
+            <tr><td>11/06</td><td>《周五夜谈》第 7 期</td><td>平台独播</td><td>20:00</td><td>已上线</td></tr>
+            <tr><td>11/07</td><td>「夜航船」民谣拼盘</td><td>成都东郊记忆</td><td>20:00</td><td>站席余 120</td></tr>
+            <tr><td>11/08</td><td>「低频信号」电子现场</td><td>北京疆进酒</td><td>21:00</td><td>余 312 张</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+    </div>
+
+    <aside class="side" aria-label="侧栏">
+      <div class="panel">
+        <h3>本页导航</h3>
+        <ul class="side-nav" id="sideNav">
+          <li><a href="/#channels">频道路由</a></li>
+          <li><a href="/#picks">编辑选片</a></li>
+          <li><a href="/#latest">本周更新</a></li>
+          <li><a href="/#deep">深度解析</a></li>
+          <li><a href="/#guide">观演指南</a></li>
+          <li><a href="/#faq">常见问题</a></li>
+          <li><a href="/#comments">观众评论</a></li>
+          <li><a href="/#news">相关资讯</a></li>
+          <li><a href="/#ranking">城市热度榜</a></li>
+          <li><a href="/#tags">推荐标签</a></li>
+          <li><a href="/#calendar">场次日历</a></li>
+        </ul>
+      </div>
+      <div class="panel">
+        <h3>48 小时内售罄风险</h3>
+        <ul class="list-tight" style="font-size:13px">
+          <li><span class="date-chip">11/06</span><div>弦乐四重奏 480 元档 <span class="sub">余 9 张</span></div></li>
+          <li><span class="date-chip">11/07</span><div>民谣拼盘预售票 <span class="sub">余 34 张</span></div></li>
+          <li><span class="date-chip">11/08</span><div>电子现场早鸟 <span class="sub">已售罄</span></div></li>
+        </ul>
+      </div>
+      <div class="panel">
+        <h3>条目可信度分层</h3>
+        <ul style="list-style:none;padding:0;margin:0;font-size:13px;color:var(--ink-2)">
+          <li style="margin-bottom:8px"><span class="tag">一手</span> 主办方公告、场馆通知、发行通知</li>
+          <li style="margin-bottom:8px"><span class="tag">二手</span> 排片沟通会转述、票务页余票快照</li>
+          <li><span class="tag warm">待核</span> 观众对视线遮挡的描述，仅作参考</li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <div class="foot-brand">
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <rect width="64" height="64" rx="14" fill="#1c5c4c"/>
+            <path d="M18 41c4-15 9-17 13-8s9 7 14-9" stroke="#f2c14e" stroke-width="6" fill="none" stroke-linecap="round"/>
+            <circle cx="48" cy="41" r="5" fill="#c8552e"/>
+          </svg>
+          <span>青娱乐主页</span>
+        </div>
+        <p style="font-size:13px;color:#a9c4b6;margin:0">把开票、排片、更新与退改规则放在一张表上，出门前十分钟能核对完。</p>
+        <p style="font-size:12px;color:#a9c4b6;margin-top:12px">页面更新时间：2026年11月8日 · 对应正文更新项：标题「本周更新清单」11月2日至8日共 7 条。</p>
+      </div>
+      <div>
+        <h3>内容频道</h3>
+        <ul>
+          <li><a href="/#picks">现场演出票务</a></li>
+          <li><a href="/#picks">院线片单</a></li>
+          <li><a href="/#latest">剧集排播表</a></li>
+          <li><a href="/#latest">综艺更新时间</a></li>
+          <li><a href="/#deep">深度解析</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>实用入口</h3>
+        <ul>
+          <li><a href="/#guide">观演指南</a></li>
+          <li><a href="/#faq">常见问题</a></li>
+          <li><a href="/#calendar">场次日历</a></li>
+          <li><a href="/#ranking">城市热度榜</a></li>
+          <li><a href="/#tags">推荐标签</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>互动</h3>
+        <ul>
+          <li><a href="/#comments">观众评论</a></li>
+          <li><a href="/#news">相关资讯</a></li>
+          <li><a href="/#overview">回首页</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="foot-note">示例数据说明：本页演出场次、票档、余票、排片占比与评论均为演示用示例条目，日期落在 2026年11月8日及此前 30 天内，不代表真实票务或发行信息。品牌标识、版权与联系方式以实际运营方资料为准。<br>© 2026 青娱乐主页 · 内容索引未经许可不得整表转载</p>
+  </div>
+</footer>
+
+<button id="toTop" type="button" aria-label="回到顶部">↑</button>
+
+<script>
+(function(){
+  var menuBtn=document.getElementById('menuBtn');
+  var mainNav=document.getElementById('mainNav');
+  menuBtn.addEventListener('click',function(){
+    var open=mainNav.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded',open?'true':'false');
+  });
+  mainNav.addEventListener('click',function(e){
+    if(e.target.tagName==='A'&&window.innerWidth<=760){
+      mainNav.classList.remove('open');
+      menuBtn.setAttribute('aria-expanded','false');
+    }
+  });
+
+  var links=[].slice.call(document.querySelectorAll('#sideNav a'));
+  var ids=links.map(function(a){return a.getAttribute('href').replace('/#','');});
+  var obs=new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if(en.isIntersecting){
+        var i=ids.indexOf(en.target.id);
+        if(i>-1){
+          links.forEach(function(l){l.classList.remove('active')});
+          links[i].classList.add('active');
+        }
+      }
+    });
+  },{rootMargin:'-120px 0px -60% 0px',threshold:0});
+  ids.forEach(function(id){
+    var el=document.getElementById(id);
+    if(el)obs.observe(el);
+  });
+
+  var toTop=document.getElementById('toTop');
+  window.addEventListener('scroll',function(){
+    if(window.scrollY>500){toTop.classList.add('show')}else{toTop.classList.remove('show')}
+  },{passive:true});
+  toTop.addEventListener('click',function(){
+    window.scrollTo({top:0,behavior:'smooth'});
+  });
+
+  var q=document.getElementById('q');
+  var btn=document.getElementById('searchBtn');
+  var msg=document.getElementById('searchMsg');
+  function doSearch(){
+    var kw=q.value.trim().toLowerCase();
+    if(!kw){msg.textContent='请输入演出名、片名、剧集名或标签词。';return;}
+    var nodes=[].slice.call(document.querySelectorAll('main h2,main h3,main li,main .ch-item,main .tag'));
+    var hit=null;
+    for(var i=0;i<nodes.length;i++){
+      if(nodes[i].textContent.toLowerCase().indexOf(kw)>-1){hit=nodes[i];break;}
+    }
+    if(hit){
+      msg.textContent='已定位到：'+hit.textContent.trim().slice(0,28);
+      var sec=hit.closest('section')||hit;
+      if(sec.id){location.hash=sec.id;}else{hit.scrollIntoView({block:'center'});}
+    }else{
+      msg.textContent='未找到「'+q.value.trim()+'」相关内容，试试「低频信号」「山路弯弯」「退改规则」。';
+    }
+  }
+  btn.addEventListener('click',doSearch);
+  q.addEventListener('keydown',function(e){if(e.key==='Enter'){e.preventDefault();doSearch();}});
+})();
+</script>
+</body>
+  </html>
